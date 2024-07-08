@@ -26,6 +26,7 @@ public class BirdScript : MonoBehaviour
 
         if (transform.position.y > 16 || transform.position.y < -16)
         {
+            logic.GameOverSFX.Play();
             logic.gameOver();
             birdIsAlive = false;
         }
@@ -33,6 +34,7 @@ public class BirdScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        logic.GameOverSFX.Play();
         logic.gameOver();
         birdIsAlive = false;
     }

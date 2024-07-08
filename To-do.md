@@ -3,10 +3,10 @@
 DONE ✅
 
 - Game over if bird goes off screen
+- Bug where score can go up after game over
 
 TODO 📋
 
-- Bug where score can go up after game over
 - Sound effect when score goes up
   - _When bird flaps (Spacebar is pressed)_
   - _At game over_

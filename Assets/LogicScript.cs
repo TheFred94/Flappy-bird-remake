@@ -4,17 +4,27 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class LogicScript : MonoBehaviour
 {
+    public AudioSource DingSFX;
+    public AudioSource GameOverSFX;
     public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
 
+
+
+
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
     {
+        Debug.Log("Score increased");
+
+        DingSFX.Play();
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
+
     }
 
     public void restartGame()
@@ -26,6 +36,8 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
+        Debug.Log("Game Over");
+        GameOverSFX.Play();
         gameOverScreen.SetActive(true);
     }
 }
