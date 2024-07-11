@@ -17,27 +17,33 @@ public class LogicScript : MonoBehaviour
 
 
     [ContextMenu("Increase Score")]
-    public void addScore(int scoreToAdd)
+    public void AddScore(int scoreToAdd)
     {
         Debug.Log("Score increased");
-
         DingSFX.Play();
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
 
     }
 
-    public void restartGame()
+    public void RestartGame()
     {
+        Debug.Log("Game restarted");
         // Looks for the name of the scene (aka. filename)
         // This gets the active scene 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void gameOver()
+    public void GameOver()
     {
         Debug.Log("Game Over");
-        GameOverSFX.Play();
         gameOverScreen.SetActive(true);
+        PlayGameOverSFX();
+    }
+
+    public void PlayGameOverSFX()
+    {
+        GameOverSFX.Play();
+        Debug.Log("Sound played");
     }
 }

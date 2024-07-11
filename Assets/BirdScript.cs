@@ -24,18 +24,23 @@ public class BirdScript : MonoBehaviour
             myRigidBody.velocity = Vector2.up * flapStrength;
         };
 
-        if (transform.position.y > 16 || transform.position.y < -16)
+        // Check if the bird is out of bounds and is still alive before game over
+        // This is to prevent the sound and GameOver function to be called multiple times
+        if ((transform.position.y > 16 || transform.position.y < -16) && birdIsAlive)
         {
-            logic.GameOverSFX.Play();
-            logic.gameOver();
+            Debug.Log("Out of bounds");
+            logic.GameOver();
             birdIsAlive = false;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        logic.GameOverSFX.Play();
-        logic.gameOver();
-        birdIsAlive = false;
+        if (birdIsAlive)
+        {
+            Debug.Log("Collision detected");
+            logic.GameOver();
+            birdIsAlive = false;
+        }
     }
 }

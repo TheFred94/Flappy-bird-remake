@@ -28,6 +28,6 @@ public class PipeMiddleScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 3 && bird.birdIsAlive)
-        { logic.addScore(1); }
+        { logic.AddScore(1); }
     }
 }
