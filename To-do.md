@@ -4,14 +4,16 @@ DONE ✅
 
 - Game over if bird goes off screen
 - Bug where score can go up after game over
+- Sounds
+  - _At game over_
+  - _Point gained_
+- Particles - Make clouds appear
 
 TODO 📋
 
 - Sound effect when score goes up
   - _When bird flaps (Spacebar is pressed)_
-  - _At game over_
   - _Background music_
-- Particles - Make clouds appear
 - Title screen - So the game doesn't immedietly start
 
   - Add new scene to build settings window
