@@ -56,11 +56,5 @@
     "temp/": true,
     "Temp/": true
   },
-  "dotnet.defaultSolution": "Flappy bird remake.sln",
-  "workbench.colorCustomizations": {
-    "sash.hoverBorder": "#927484",
-    "titleBar.activeBackground": "#765d6a",
-    "titleBar.inactiveBackground": "#765d6a99"
-  },
-  "peacock.color": "#765d6a"
+  "dotnet.defaultSolution": "Flappy bird remake.sln"
 }

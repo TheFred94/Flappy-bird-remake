@@ -22,6 +22,7 @@ public class BirdScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
         {
             myRigidBody.velocity = Vector2.up * flapStrength;
+            
         };
 
         // Check if the bird is out of bounds and is still alive before game over
